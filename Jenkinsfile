@@ -8,6 +8,7 @@ pipeline {
                     // To run Maven on a Windows agent, use
                     bat "mvn -Dmaven.test.failure.ignore=true clean package"
                 }
+            }
              stage('Test Analyse') {
                 steps {
                     bat 'mvn checkstyle:checkstyle'
